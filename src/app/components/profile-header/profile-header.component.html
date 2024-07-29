@@ -1,0 +1,15 @@
+@if (profile(); as profile) {
+@if (profile.avatarUrl) {
+<img [src]="profile.avatarUrl | avatar" alt="" avatar_image>
+} @else {
+<img class="avatar_image"
+  src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+  alt="">
+}
+
+<div class="username__name">
+  <h1 class="username__info--name h4">{{profile.firstName}} {{profile.lastName}}</h1>
+  <p class="username__info--nickname">{{profile.username}}</p>
+</div>
+
+}

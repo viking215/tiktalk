@@ -1,0 +1,65 @@
+.profile-card {
+  height: 100px;
+  border: 1px solid var(--light-color);
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  &__description {
+    font-size: 12px;
+    margin: 0;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 6px 4px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &--name {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &--nickname {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  &__img {
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}

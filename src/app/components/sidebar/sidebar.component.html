@@ -1,0 +1,55 @@
+<div class="sidebar-menu">
+  <div class="logo-block">
+    <img src="/assets/images/group.svg" width="60" alt="">
+  </div>
+
+  <nav>
+    <ul class="main-menu-list">
+      @for (item of menuItems; track item.position) {
+      <li>
+        <button class="menu-item">
+          <img [src]="item.src" width="16" [alt]="item.label">
+          <span>{{item.label}}</span>
+        </button>
+      </li>
+      }
+    </ul>
+  </nav>
+
+  <div class="secondary-menu-text">
+    <p class="medium-text">Подписчики</p>
+    <!-- <app-subscriber-card></app-subscriber-card> -->
+    <!-- <pre>{{ subscribers$ | async | json}}</pre> -->
+    @for (profile of subscribers$ | async; track profile.id) {
+    <app-subscriber-card [profile]="profile"></app-subscriber-card>
+    }
+  </div>
+  <div class="go-to-subscribers">
+    <a [routerLink]="['/subscribers']" class="subscribers-link">
+      <span>Все подписчики</span>
+      <img src="/assets/icons/arrow-right.svg" alt="">
+    </a>
+  </div>
+</div>
+
+<footer class="sidebar-footer">
+  <!-- <button class="btn-primary" (click)="handleLogOut()">Log Out</button> -->
+  @if (me(); as me) {
+  @if (me.avatarUrl) {
+  <img [src]="me.avatarUrl | avatar" alt="">
+  } @else {
+  <img class="avatar_image"
+    src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+    alt="">
+  }
+  <span class="sidebar-username">{{me.username}}</span>
+
+  <a [routerLink]="['/settings']">
+    <button class="sidebar-settings">
+      <img src="/assets/icons/settings.svg" alt="settings">
+    </button>
+  </a>
+  }
+</footer>
+
+<!-- <svg-icon icon='home'></svg-icon> -->

@@ -1,0 +1,37 @@
+<div class="profile-card">
+  <div class="avatar">
+    <div class="avatar__img">
+      <img [src]="profile.avatarUrl | avatar"
+        alt="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+        width="70" class="avatar">
+    </div>
+    <div class="avatar__info">
+      <h3 class="avatar__info--name h6">
+        {{profile.firstName}} {{profile.lastName}}
+      </h3>
+      <p class="avatar__info--nickname">
+        {{profile.username}}
+      </p>
+    </div>
+  </div>
+  <div class="profile-card__description">
+    {{profile.description}}
+  </div>
+  <div class="profile-card__tags">
+    @for (tag of profile.stack; track tag) {
+    @if (generalTags.includes(tag)) {
+    <div class="skill-tag__general">{{tag}}</div>
+    } @else {
+    <div class="skill-tag">{{tag}}</div>
+    }
+    }
+  </div>
+  <div class="profile-card__actions">
+    <button class="btn-primary">
+      <span>Подписаться</span>
+    </button>
+    <button class="btn-primary">
+      <span>-></span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+:host {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 24px;
+}
+
+.avatar_image {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+
+.username__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  // display: flex;
+  // flex-direction: row;
+  // gap: 20px;
+  // align-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &--name {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &--nickname {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}

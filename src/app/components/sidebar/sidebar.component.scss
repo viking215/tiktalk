@@ -1,0 +1,97 @@
+:host {
+  display: flex;
+  padding: 20px 12px 8px 12px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--dark-color);
+
+}
+
+.logo-block {
+  padding: 0 28px;
+  margin-bottom: 20px;
+}
+
+.main-menu-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding-left: 14px;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--light-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "JetBrains Mono", sans-serif;
+  width: 100%;
+  text-align: left;
+  border-radius: 2px;
+
+
+  &:hover,
+  &:focus-visible {
+    background-color: #161616;
+    color: var(--primary-color);
+  }
+
+  .menu-item svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.secondary-menu-text {
+  padding: 5px 28px;
+}
+
+.subscribers-link {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 28px;
+}
+
+.sidebar-footer {
+  background: var(--light-dark-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  gap: 12px;
+  align-items: center;
+
+}
+.avatar_image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.sidebar-username {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--primary-color);
+}
+
+.sidebar-settings {
+  border: none;
+  background: none;
+  margin-top: 4px;
+  cursor: pointer;
+}
