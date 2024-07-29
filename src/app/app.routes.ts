@@ -5,6 +5,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,7 @@ export const routes: Routes = [
     children: [
       { path: '', component: SearchPageComponent },
       { path: 'profile/:id', component: ProfilePageComponent },
+      { path: 'settings', component: SettingsComponent },
     ],
     canActivate: [canAvtivateAuth],
   },

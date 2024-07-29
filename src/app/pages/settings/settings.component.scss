@@ -1,0 +1,51 @@
+:host {
+  display: grid;
+  grid-template-columns: 322px 1fr;
+  gap: 48px;
+  padding: 24px;
+}
+
+.profile-form {
+  padding: 32px;
+  border: solid 1px var(--light-color);
+  background: var(--dark-color);
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-submit-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn-logout {
+  width: 44px;
+}
+
+
+.form-submit-block {
+  .text-btn {
+    width: 100px;
+    color: var(--light-color);
+  }
+}

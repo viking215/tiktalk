@@ -7,10 +7,12 @@
     <ul class="main-menu-list">
       @for (item of menuItems; track item.position) {
       <li>
-        <button class="menu-item">
-          <img [src]="item.src" width="16" [alt]="item.label">
-          <span>{{item.label}}</span>
-        </button>
+        <a [routerLink]="item.href">
+          <button class="menu-item">
+            <img [src]="item.src" width="16" [alt]="item.label">
+            <span>{{item.label}}</span>
+          </button>
+        </a>
       </li>
       }
     </ul>

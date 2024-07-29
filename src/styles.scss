@@ -53,6 +53,27 @@ body {
   line-height: 24px;
 }
 
+.btn-secondary {
+  //width: 44px;
+  height: 44px;
+  background: var(--dark-color);
+  border: 1px solid var(--light-color);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  // background-color: var(--primary-color);
+  // color: var(--dark-color);
+  // padding: 10px 20px;
+  // border-radius: 1px;
+  // cursor: pointer;
+  // border: none;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 24px;
+}
+
 .h6 {
   font-size: 18px;
   line-height: 24px;
@@ -60,9 +81,9 @@ body {
 }
 
 .h4 {
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 32px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
 }
 
 .medium-text {
@@ -71,4 +92,59 @@ body {
   font-weight: 500;
   line-height: 16px;
   color: var(--light-gray-color);
+}
+
+.tt-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--light-gray-color)
+  }
+
+}
+
+.tt-form-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  background: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+  border-bottom: 1px solid var(--light-gray-color);
+  height: 33px;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+  }
+}
+
+.tt-form-textarea {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  background: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+  border-bottom: 1px solid var(--light-gray-color);
+  height: 60px;
+  resize: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+  }
 }

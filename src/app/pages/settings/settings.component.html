@@ -1,0 +1,54 @@
+<!-- <app-profile-header [profile]="profile$"> </app-profile-header> -->
+<app-profile-header> </app-profile-header>
+<form [formGroup]="form" class="profile-form">
+  <div class="profile-form__inputs">
+    <div class="two-columns">
+      <label class="tt-form-label">
+        <span>Имя</span>
+        <input class="tt-form-input" formControlName="firstName">
+      </label>
+      <label class="tt-form-label">
+        <span>Фамилия</span>
+        <input class="tt-form-input" formControlName="lastName">
+      </label>
+    </div>
+    <label class="tt-form-label">
+      <span>Telegram username</span>
+      <input class="tt-form-input" formControlName="username">
+    </label>
+
+    <label class="tt-form-label">
+      <span>О себе</span>
+      <!-- <input class="tt-form-input" formControlName="description"> -->
+      <textarea class="tt-form-textarea" formControlName="description" name="" id=""></textarea>
+    </label>
+
+    <label class="tt-form-label">
+      <span>О себе</span>
+      <h3>photo uploader</h3>
+    </label>
+
+    <label class="tt-form-label">
+      <span>Навыки</span>
+      <input class="tt-form-input" formControlName="stack">
+    </label>
+  </div>
+
+  <div class="profile-form__actions">
+    <div>
+      <button class="btn-secondary btn-logout" (click)="handleLogOut()">
+        <img src="/assets/icons/logout.svg" alt="logout">
+      </button>
+    </div>
+    <div class="form-submit-block">
+      <!-- <button class="btn-secondary text-btn">
+        <span>Отмена</span>
+      </button> -->
+      <button class="btn-primary" (click)="onSubmit()">
+        <span>Сохранить</span>
+      </button>
+    </div>
+
+  </div>
+
+</form>

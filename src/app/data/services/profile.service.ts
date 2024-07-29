@@ -42,4 +42,8 @@ export class ProfileService {
         })
       );
   }
+
+  patchProfile(formData: Partial<Profile>) {
+    return this.http.patch<Profile>(this.baseApiUrl + 'account/me', formData);
+  }
 }

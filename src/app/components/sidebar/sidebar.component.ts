@@ -36,7 +36,7 @@ export class SidebarComponent {
       src: '/assets/icons/home.svg',
       label: 'Моя страница',
       position: 1,
-      href: '',
+      href: '/profile/me',
     },
     {
       src: '/assets/icons/chat.svg',

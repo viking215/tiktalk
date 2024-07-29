@@ -1,2 +1,4 @@
-<img class="user__avatar" [src]="profile.avatarUrl | avatar" [alt]="profile.username">
-<p class="user__name">{{profile.firstName}} {{profile.lastName}}</p>
+<a class="subscriber-avatar-btn" [routerLink]="['/profile/', profile.id]">
+  <img class="user__avatar" [src]="profile.avatarUrl | avatar" [alt]="profile.username">
+  <p class="user__name">{{profile.firstName}} {{profile.lastName}}</p>
+</a>
