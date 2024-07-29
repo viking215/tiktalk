@@ -1,1 +1,61 @@
-<app-profile-header> </app-profile-header>
+@if (profile$ | async; as profile) {
+<header class="profile-page__header">
+  <app-profile-header [profile]="profile"> </app-profile-header>
+  <a class="btn-block" [routerLink]="['/settings']">
+    <button class="btn-primary btn-edit">
+      Редактировать
+
+      <img src="/assets/icons/settings-black.svg" alt="settings">
+    </button>
+  </a>
+</header>
+
+<main class="profile-page__body">
+  <app-post-feed></app-post-feed>
+  <div class="profile-info">
+    <div class="subscribers-block">
+      @if (subscribers$) {<div class="subscribers-header__block">
+        <h3 class="h6 subscribers-header">Подписчики</h3>
+        <div class="subscribers-count">
+          {{profile.subscribersAmount}}
+        </div>
+      </div>
+
+      <div class="subscriber-avatar-list">
+        @for (subscriber of subscribers$ | async; track subscriber.id) {
+        <a class="subscriber-avatar-btn" [routerLink]="['/profile/', subscriber.id]">
+          <img [src]="subscriber.avatarUrl | avatar" alt="">
+        </a>
+
+        }
+        <div class="btn-plus">
+          <a [routerLink]="['/search/']">
+            <img src="/assets/icons/plus.svg" alt="+" width="16">
+          </a>
+        </div>
+      </div>}
+    </div>
+
+    <div class="skils-block">
+      <h3 class="h6 subscribers-header">Навыки</h3>
+      <div class="profile-card__tags">
+        @for (tag of profile.stack; track tag) {
+        @if (generalTags.includes(tag)) {
+        <div class="skill-tag__general">{{tag}}</div>
+        } @else {
+        <div class="skill-tag">{{tag}}</div>
+        }
+        }
+      </div>
+    </div>
+
+    <div class="about-block">
+      <h3 class="h6 subscribers-header">О себе</h3>
+      <p class="medium-text">
+        {{profile.description}}
+      </p>
+    </div>
+
+  </div>
+</main>
+}

@@ -1,0 +1,104 @@
+.profile-page {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+  }
+
+  &__body {
+    padding: 24px;
+  }
+
+}
+
+.btn-block {
+  text-decoration: none;
+}
+
+.btn-edit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-page {
+  &__body {
+    display: grid;
+    gap: 64px;
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.profile-info {
+  padding: 0 24px;
+}
+
+.subscribers-block,
+.skils-block,
+.about-block {
+  margin-bottom: 32px;
+}
+
+
+.subscribers-header__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribers-count {
+  width: 26px;
+  height: 18px;
+  background: var(--green-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+}
+
+.subscribers-header {
+  margin-bottom: 16px;
+}
+
+.subscriber-avatar-list {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: start;
+}
+
+.subscriber-avatar-btn {
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+}
+
+.btn-plus {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  height: 100px;
+  border: 1px solid var(--light-color);
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 6px 4px;
+  }
+}

@@ -13,16 +13,4 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class LayoutComponent {
   profileService = inject(ProfileService);
-
-  // constructor() {
-  //   this.profileService.getMe().subscribe((response) => {
-  //     console.log(response);
-  //   });
-  // }
-
-  // ngOnInit() {
-  //   this.profileService.getMe().subscribe((response) => {
-  //     console.log(response);
-  //   });
-  // }
 }

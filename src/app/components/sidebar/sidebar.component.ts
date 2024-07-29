@@ -57,7 +57,6 @@ export class SidebarComponent {
   }
 
   handleLogOut = () => {
-    //debugger;
     this.authService.logout();
   };
 }
